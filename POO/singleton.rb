@@ -21,3 +21,7 @@ InstanciaUnica.instance.metodo_um
 InstanciaUnica.instance.metodo_dois
 
 p InstanciaUnica.instance === InstanciaUnica.instance
+
+p defined? InstanciaUnica
+p defined? InstanciaUnica.instance
+p defined? InstanciaUnica.instance.metodo_um
