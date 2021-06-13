@@ -80,7 +80,7 @@ Accessors.texto = 'Texto adicionado ao Acessors'
 p Accessors.texto
 
 p '--------------------------------------------'
-p 'Modulo - Namespaces'
+p 'Modulo - Namespaces com Classes'
 
 module Utilidades
   class Cpf
@@ -110,8 +110,25 @@ p ut_cnpj
 ut_cnpj.document = '38250860896'
 p ut_cnpj.validar
 
-class CadastroPessoa
-  include Utilidades
 
+p '--------------------------------------------'
+p 'Modulo - Namespaces com metodos'
+
+module Utilidades2
+  def validar_cpf(document)
+    check_cpf(document)
+  end
+
+  def validar_cnpj(document)
+    check_cnpj(document)
+  end
 end
+
+class CadastroPessoa
+  include Utilidades2
+end
+
+cp = CadastroPessoa.new
+p cp.validar_cpf('38250860896')
+p cp.validar_cnpj('38250860896')
 
