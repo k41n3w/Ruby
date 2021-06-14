@@ -110,7 +110,6 @@ p ut_cnpj
 ut_cnpj.document = '38250860896'
 p ut_cnpj.validar
 
-
 p '--------------------------------------------'
 p 'Modulo - Namespaces com metodos'
 
@@ -131,4 +130,33 @@ end
 cp = CadastroPessoa.new
 p cp.validar_cpf('38250860896')
 p cp.validar_cnpj('38250860896')
+
+p '--------------------------------------------'
+p 'Modulo Sobre classes .include'
+# Adicionei o metodo trim que aprendi a muito tempo para remover espaços em branco.
+
+# p "a a - a".trim
+
+module TextChanger
+  def trim
+    self.gsub(" ", "")
+  end
+
+  def to_snake
+    self.gsub(" ", "_")
+  end
+
+  def say_hello
+    p 'hello'
+  end
+end
+
+String.include TextChanger
+String.extend TextChanger
+
+p "a a - a 1".trim # Funciona por conta do include
+p "model name".to_snake # Funciona por conta do include
+
+String.say_hello # Funciona pela adição do extend
+
 
