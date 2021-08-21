@@ -14,3 +14,25 @@ in ['th', orig_text, 'ja', trans_text]
   # this will get executed
   puts "Japanese translation: #{orig_text} => #{trans_text}"
 end
+
+
+p '------------------------------------------------------------------------------'
+# Exemplo:
+
+from = 'caconde'
+to   = 'são paulo'
+
+# Não sei a distancia
+# from = 'caconde'
+# to   = ''
+
+case [from, to]
+in 'caconde', 'são paulo'
+  puts 'Longa viagem!'
+in 'são josé', 'são paulo'
+  puts 'Pertinho!'
+in 'caconde', _
+  puts 'Não sei a distância :/'
+else
+  puts 'Caminho não encontrado'
+end
