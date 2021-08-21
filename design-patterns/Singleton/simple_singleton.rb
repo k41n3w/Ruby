@@ -1,7 +1,6 @@
 # The Singleton class defines the `instance` method that lets clients access the
 # unique singleton instance.
 # https://refactoring.guru/pt-br/design-patterns/singleton/ruby/example#example-0
-
 class Singleton
   @instance = new
 
