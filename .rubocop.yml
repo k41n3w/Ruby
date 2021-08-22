@@ -4,5 +4,4 @@ Style/TernaryParentheses:
   Enabled: false
 
 Style/StringLiterals:
-  # crystal <3
   EnforcedStyle: double_quotes
