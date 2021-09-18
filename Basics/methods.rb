@@ -16,7 +16,8 @@ def test_two
 end
 puts test_two
 
-p '# quantidade de parametros não definidas, amazing'
+p "# quantidade de parametros não definidas, amazing"
+
 def sample (*test)
   puts "The number of parameters is #{test.length}"
   for i in 0...test.length
